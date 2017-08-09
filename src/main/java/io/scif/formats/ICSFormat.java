@@ -1319,7 +1319,8 @@ public class ICSFormat extends AbstractFormat {
 			final Metadata meta) throws FormatException, IOException
 		{
 
-			String icsId, idsId;
+			String icsId;
+			String idsId;
 			Location icsLocation;
 			Location idsLocation;
 			icsId = idsId = stream.get().getName();
@@ -1340,7 +1341,6 @@ public class ICSFormat extends AbstractFormat {
 
 				icsLocation = stream.get();
 				idsLocation = icsLocation.getSibling(idsId);
-
 			}
 			else if ("ids".equals(ext)) {
 				// convert D to C regardless of case
